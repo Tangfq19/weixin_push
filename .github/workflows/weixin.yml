@@ -1,0 +1,28 @@
+name: weixin
+
+on: 
+  workflow_dispatch:
+  schedule:
+  - cron: '0 0 * * *'
+  
+jobs:
+  build:
+  
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9.1
+    - name: install pip package
+    
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirement.txt
+        
+    - name: weixin
+      run: |
+        python3 main.py
