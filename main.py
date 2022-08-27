@@ -195,7 +195,7 @@ def tip():
         return "",""
 
 #推送信息
-def send_message(to_user, access_token, city_name, weather, max_temperature, min_temperature, pipi, lizhi, pop, tips, note_en, note_ch, health_tip, lucky_):
+def send_message(to_user, access_token, city_name, weather, max_temperature, min_temperature,city_name2, weather2, max_temperature2, min_temperature2, pipi, lizhi, pop, tips, note_en, note_ch, health_tip, lucky_):
     url = "https://api.weixin.qq.com/cgi-bin/message/template/send?access_token={}".format(access_token)
     week_list = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"]
     year = localtime().tm_year
@@ -239,6 +239,22 @@ def send_message(to_user, access_token, city_name, weather, max_temperature, min
             },
             "max_temperature": {
                 "value": max_temperature,
+                "color": get_color()
+            },
+            "city2": {
+                "value": city_name2,
+                "color": get_color()
+            },
+            "weather2": {
+                "value": weather2,
+                "color": get_color()
+            },
+            "min_temperature2": {
+                "value": min_temperature2,
+                "color": get_color()
+            },
+            "max_temperature2": {
+                "value": max_temperature2,
                 "color": get_color()
             },
             "love_day": {
@@ -327,7 +343,9 @@ if __name__ == "__main__":
     users = config["user"]
     # 传入省份和市获取天气信息
     province, city = config["province"], config["city"]
+    province2, city2 = config["province2"], config["city2"]
     weather, max_temperature, min_temperature = get_weather(province, city)
+    weather2, max_temperature2, min_temperature2 = get_weather(province2, city2)
     #获取彩虹屁API
     caihongpi_API=config["caihongpi_API"]
     #获取励志古言API
@@ -356,7 +374,7 @@ if __name__ == "__main__":
     lucky_ = lucky()
     # 公众号推送消息
     for user in users:
-        send_message(user, accessToken, city, weather, max_temperature, min_temperature, pipi, lizhi,pop,tips, note_en, note_ch, health_tip, lucky_)
+        send_message(user, accessToken, city, weather, max_temperature, min_temperature,city2, weather2, max_temperature2, min_temperature2, pipi, lizhi,pop,tips, note_en, note_ch, health_tip, lucky_)
     import time
     time_duration = 3.5
     time.sleep(time_duration)
