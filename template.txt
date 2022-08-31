@@ -1,0 +1,8 @@
+今天是：{{date.DATA}} 
+{{city.DATA}}今天天气：{{weather.DATA}} 气温:{{min_temperature.DATA}} ~ {{max_temperature.DATA}} 
+{{city2.DATA}}今天天气：{{weather2.DATA}} 气温: {{min_temperature2.DATA}} ~ {{max_temperature2.DATA}} 
+我们恋爱{{love_day.DATA}}天啦~ 
+距我们的生日还有{{birthday1.DATA}}和{{birthday2.DATA}}天！
+ {{pipi.DATA}} ^_^ 
+健康小知识： {{health.DATA}} 
+水瓶座今日运势： {{lucky.DATA}}
