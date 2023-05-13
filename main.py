@@ -10,9 +10,10 @@ import json
 from zhdate import ZhDate
 def get_color():
     # 获取随机颜色
-    get_colors = lambda n: list(map(lambda i: "#" + "%06x" % random.randint(0, 0xFFFFFF), range(n)))
-    color_list = get_colors(100)
-    return random.choice(color_list)
+    #get_colors = lambda n: list(map(lambda i: "#" + "%06x" % random.randint(0, 0xFFFFFF), range(n)))
+    #color_list = get_colors(100)
+    #return random.choice(color_list)
+    return "#000000"
 
 
 def get_access_token():
@@ -372,6 +373,19 @@ if __name__ == "__main__":
     lizhi = lizhi()
     #星座运势
     lucky_ = lucky()
+    # 选取小于 20长度的字符
+    #strs = [lucky_, lizhi, pipi,note_ch,note_en,health_tip]
+    #len_str = len(strs[0])
+    #min_num_index = 0   # 最小值的下标
+    #stack = [strs[0]]   # 利用栈来找出最短的字符串
+    #for index, string in enumerate(strs):
+    #    if len(string) < len_str:
+    #        stack.pop()
+    #        len_str = len(string)
+    #        min_num_index = index # 知道最短字符对应的下标后，也可以自己找出最短字符
+    #        stack.append(string)
+    #pipi = stack
+
     # 公众号推送消息
     for user in users:
         send_message(user, accessToken, city, weather, max_temperature, min_temperature,city2, weather2, max_temperature2, min_temperature2, pipi, lizhi,pop,tips, note_en, note_ch, health_tip, lucky_)

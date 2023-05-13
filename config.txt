@@ -5,7 +5,7 @@
 # 公众号appSecret，替换掉下方文字内容，不要删除双引号
 "app_secret": "3e257248754de1b6a5d83b0d715fdba3",
 # 模板消息id，替换掉下方文字内容，不要删除双引号
-"template_id": "TXyRqEDEGykriQpV4UoRlK9YVzWu6kJuszrd_z-ECMY",
+"template_id": "uJjHXxbTG7EMaQuo1o6en6tonzldmgb1ynauRpU7smI",
 # 接收公众号消息的微信号（user-id），如果有多个，需要在[]里用英文逗号间隔，例如["wx1", "wx2"]
 "user": ["odsZB6dIzN3LWLc_UvtVdRxvn7KY","odsZB6WNuOi3PQljtYB3Yc9J86J8"],
 # 信息配置
@@ -29,7 +29,7 @@
 #######################################
 #如果要启用，请把下面的 否 改为 是 ，注意要保留双引号
 #如果不用这个接口，请不要改动里面的内容
-"Whether_Eng":"否",
+"Whether_Eng":"是",
 ###注意要在消息模板中加入{{note_ch.DATA}}和{{note_en.DATA}}，才能够正常显示
 
 
